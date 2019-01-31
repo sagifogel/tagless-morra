@@ -39,7 +39,7 @@ playGameLoop gs = do
       c <- randomM (1, 5)
       playGameLoop $ StateT $ \s -> do 
         (xs, s') <- runStateT gs s
-        return ((c, digit, c == digit): xs, s')
+        pure ((c, digit, c == digit): xs, s')
     
     Right Quit -> printGameState gs
   
