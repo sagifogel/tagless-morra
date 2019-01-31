@@ -1,0 +1,73 @@
+-- This file has been generated from package.yaml by hpack version 0.28.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 353749a113610200dfb0771c954a39f136bac88aad5e2f8ead3c2cb9fa0a32e6
+
+name:           tagless-morra
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/tagless-morra#readme>
+homepage:       https://github.com/githubuser/tagless-morra#readme
+bug-reports:    https://github.com/githubuser/tagless-morra/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2019 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/tagless-morra
+
+library
+  exposed-modules:
+      Morra
+  other-modules:
+      Paths_tagless_morra
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , mtl
+    , random
+    , raw-strings-qq
+    , transformers
+  default-language: Haskell2010
+
+executable tagless-morra-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_tagless_morra
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , mtl
+    , random
+    , raw-strings-qq
+    , tagless-morra
+    , transformers
+  default-language: Haskell2010
+
+test-suite tagless-morra-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_tagless_morra
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , mtl
+    , random
+    , raw-strings-qq
+    , tagless-morra
+    , transformers
+  default-language: Haskell2010
